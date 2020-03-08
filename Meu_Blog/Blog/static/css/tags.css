@@ -1,0 +1,56 @@
+/* =============================
+
+VOU DEIXAR
+
+============================= */
+
+.mr-1 {
+    margin-right: .25rem!important
+}
+
+.balde {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 80%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .balde {
+        transition: none
+    }
+}
+
+.balde {
+    position: relative;
+    top: -1px
+}
+
+@media print {
+    .balde {
+        border: 1px solid #000
+    }
+}
+
+.balde-info {
+    color: #fff;
+    background-color: #17a2b8
+}
+
+a.balde-info:focus,
+a.balde-info:hover {
+    color: #fff;
+    background-color: #117a8b
+}
+
+a.balde-info.focus,
+a.balde-info:focus {
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(23, 162, 184, .5)
+}
