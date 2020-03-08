@@ -1,0 +1,55 @@
+{% extends 'base.html' %}{% block head_title %} {{ tag }} {% endblock %} {% block content %}
+
+<div id="content" class="container">
+
+    <div class="row">
+        <div class="post-container col-md-12">
+
+            <article class="post-article category">
+
+                <h1>Tag: {{tag}}</h1>
+
+            </article>
+
+        </div>
+
+    </div>
+    <div class="row masonry" id="masonry" style="position: relative; height: 880px;">
+
+        {% for post in posts %}
+
+        <div class="post-container masonry-item col-md-4">
+
+            <div class="post-article post-details post-details-1  ">
+
+                <h3 class="title">
+                    <a href="{% url 'Blog:post' pk=post.pk %}">{{post.Title}}</a>
+                </h3>
+                <div class="line">
+
+                    <div class="entry-info">
+
+                        <span><i class="fa fa-clock-o" aria-hidden="true"></i>{{post.Created_at}}</span>
+
+                    </div>
+
+                </div>
+
+                <p>{{post.Summary|safe}}
+                    <a class="read-more " href="{% url 'Blog:post' pk=post.pk %}" title="Read More">
+                        <span class="button default">Leia Mais</span>
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+
+
+</div>
+{% endblock %}
