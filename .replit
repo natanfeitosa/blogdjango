@@ -1,2 +1,2 @@
 language = "python3"
-run = "cd Meu_Blog && python ./manage.py runserver"
+run = "cd Meu_Blog && python manage.py runserver 0.0.0.0:3000"
